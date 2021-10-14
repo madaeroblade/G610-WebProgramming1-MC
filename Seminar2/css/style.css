@@ -1,0 +1,127 @@
+body
+{
+    background-color: #242542;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-size: 14px;
+}
+.row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.header
+{
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: auto;
+    z-index: 999;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 200px;
+    border-bottom: 1px solid #3f4567;
+    text-align: center;
+}
+
+.content {
+    width: 100%;
+    margin-top: 25px;
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.content .description
+{
+    align-self: flex-start;
+    flex: 0 0 50%;
+    width: 50%;
+}
+
+.content .image
+{
+    align-self: flex-start;
+    width: 50%;
+    flex: 0 0 50%;
+    align-content: end;
+}
+
+.content .description p
+{
+    margin: 10px;
+    padding: 10px;
+}
+
+.content .image img
+{
+    max-height: 500px;
+    margin-left: 20px;
+    display: block;
+}
+
+.contact {
+    width: 100%;
+    padding-top: 25px;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: 1px solid #3f4567;
+}
+
+.contact .contact_info, .contact .social_info
+{
+    align-self: flex-start;
+    flex: 0 0 50%;
+    width: 50%;
+}
+
+a
+{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover
+{
+    color: #fff;
+    text-decoration: underline;
+}
+
+ul
+{
+    list-style: none;
+    display: flex;
+    align-content: right;
+}
+
+ul li
+{
+    list-style: none;
+    display: flex;
+    margin-right: 10px;
+    font-size: 18px;
+}
