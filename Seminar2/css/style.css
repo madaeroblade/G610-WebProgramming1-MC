@@ -16,18 +16,12 @@ body
 
 .header
 {
-    left: 0%;
-    top: 0%;
-    right: 0%;
-    bottom: auto;
-    z-index: 999;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: 200px;
     border-bottom: 1px solid #3f4567;
     text-align: center;
 }
@@ -35,8 +29,6 @@ body
 .content {
     width: 100%;
     margin-top: 25px;
-    -webkit-transition: all 200ms ease;
-    transition: all 200ms ease;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -48,32 +40,35 @@ body
     justify-content: space-between;
 }
 
-.content .description
+.col-half
 {
     align-self: flex-start;
-    flex: 0 0 50%;
-    width: 50%;
+    flex: 50%;
+    flex-grow: 1;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
 }
 
-.content .image
+.col-half p
 {
-    align-self: flex-start;
-    width: 50%;
-    flex: 0 0 50%;
+    margin: 10px 15px;
+}
+
+.align-right
+{
     align-content: end;
+    align-items: flex-end;
+    -webkit-align-items: flex-end;
 }
 
-.content .description p
-{
-    margin: 10px;
-    padding: 10px;
-}
-
-.content .image img
+img
 {
     max-height: 500px;
     margin-left: 20px;
-    display: block;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
 }
 
 .contact {
@@ -84,20 +79,12 @@ body
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
     border-top: 1px solid #3f4567;
 }
-
-.contact .contact_info, .contact .social_info
-{
-    align-self: flex-start;
-    flex: 0 0 50%;
-    width: 50%;
-}
-
 a
 {
     color: #fff;
@@ -111,11 +98,10 @@ a:hover
     text-decoration: underline;
 }
 
-ul
+ul.social
 {
     list-style: none;
     display: flex;
-    align-content: right;
 }
 
 ul li
@@ -124,4 +110,35 @@ ul li
     display: flex;
     margin-right: 10px;
     font-size: 18px;
+}
+
+.social_info p
+{
+    display: block;
+    text-align: right;
+}
+
+.no-margin
+{
+    padding: 0;
+    margin: 0 !important;
+}
+
+@media screen and (max-width: 450px)
+{
+    .col-half
+    {
+        max-width: 100%;
+        flex: 100%
+    }
+
+    .content
+    {
+        flex-direction: row;
+    }
+
+    img
+    {
+        max-height: max-content;
+    }
 }
